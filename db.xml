@@ -72,8 +72,16 @@
       <datatype>VARCHAR</datatype>
       <default>NULL</default>
     </row>
+    <row name="backdrop_path" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default>
+    </row>
     <row name="runetime" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="recommandation" null="1" autoincrement="0">
+      <datatype>BOOLEAN</datatype>
       <default>NULL</default>
     </row>
     <key type="PRIMARY" name="">
@@ -99,10 +107,6 @@
     </row>
     <row name="profile_path" null="1" autoincrement="0">
       <datatype>VARCHAR</datatype>
-      <default>NULL</default>
-    </row>
-    <row name="order" null="1" autoincrement="0">
-      <datatype>INTEGER</datatype>
       <default>NULL</default>
     </row>
     <key type="PRIMARY" name="">
@@ -151,8 +155,16 @@
       <default>NULL</default>
       <relation table="movies" row="id" />
     </row>
-    <row name="new field" null="1" autoincrement="0">
+    <row name="date" null="1" autoincrement="0">
       <datatype>DATE</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="language" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="pourtous" null="1" autoincrement="0">
+      <datatype>BOOLEAN</datatype>
       <default>NULL</default>
     </row>
     <key type="PRIMARY" name="">
