@@ -2,7 +2,7 @@
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
 <!-- Active URL: https://kitt.lewagon.com/db/2105 -->
 <sql>
-<datatypes db="postgresql">
+  <datatypes db="postgresql">
     <group label="Numeric" color="rgb(238,238,170)">
       <type label="Integer" length="0" sql="INTEGER" re="INT" quote=""/>
       <type label="Small Integer" length="0" sql="SMALLINT" quote=""/>
@@ -41,123 +41,189 @@
       <type label="Inet CIDR Addr" length="0" sql="CIDR" quote="'"/>
       <type label="Geometry" length="0" sql="GEOMETRY" quote="'"/>
     </group>
-  </datatypes><table x="156" y="183" name="movies">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="tmdb_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="title" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="overview" null="1" autoincrement="0">
-<datatype>TEXT</datatype>
-<default>NULL</default></row>
-<row name="adult" null="1" autoincrement="0">
-<datatype>BYTEA</datatype>
-<default>NULL</default></row>
-<row name="poster_path" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="backdrop_path" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="runetime" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="recommandation" null="1" autoincrement="0">
-<datatype>BOOLEAN</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="687" y="439" name="credits">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="tmdb_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="character" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="name" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="profile_path" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="750" y="32" name="genres">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="name" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="450" y="51" name="movie_genres">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_movies" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="movies" row="id" />
-</row>
-<row name="id_genres" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="genres" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="857" y="256" name="shows">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_movies" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="movies" row="id" />
-</row>
-<row name="date" null="1" autoincrement="0">
-<datatype>DATE</datatype>
-<default>NULL</default></row>
-<row name="language" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="pourtous" null="1" autoincrement="0">
-<datatype>BOOLEAN</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="411" y="389" name="movie_credits">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_credits" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="credits" row="id" />
-</row>
-<row name="id_movies" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="movies" row="id" />
-</row>
-<row name="order" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
+  </datatypes>
+  <table x="156" y="183" name="movies">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="tmdb_id" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="title" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="overview" null="1" autoincrement="0">
+      <datatype>TEXT</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="adult" null="1" autoincrement="0">
+      <datatype>BYTEA</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="poster_path" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="backdrop_path" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="runetime" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="recommandation" null="1" autoincrement="0">
+      <datatype>BOOLEAN</datatype>
+      <default>NULL</default>
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="672" y="354" name="credits">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="tmdb_id" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="character" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="name" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="profile_path" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default>
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="750" y="32" name="genres">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="name" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default>
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="450" y="51" name="movie_genres">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="id_movies" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+      <relation table="movies" row="id" />
+    </row>
+    <row name="id_genres" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+      <relation table="genres" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="745" y="156" name="shows">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="id_movies" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+      <relation table="movies" row="id" />
+    </row>
+    <row name="date" null="1" autoincrement="0">
+      <datatype>DATE</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="language" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="pourtous" null="1" autoincrement="0">
+      <datatype>BOOLEAN</datatype>
+      <default>NULL</default>
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="409" y="300" name="movie_credits">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="id_credits" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+      <relation table="credits" row="id" />
+    </row>
+    <row name="id_movies" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+      <relation table="movies" row="id" />
+    </row>
+    <row name="order" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="264" y="473.25" name="users">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="email" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="encrypted_password" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="name" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="last_name" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="reset_password_token" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="reset_password_sent_at" null="1" autoincrement="0">
+      <datatype>DATE</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="remember_created_at" null="1" autoincrement="0">
+      <datatype>DATE</datatype>
+      <default>NULL</default>
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
 </sql>
