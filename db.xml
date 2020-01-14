@@ -42,13 +42,17 @@
       <type label="Geometry" length="0" sql="GEOMETRY" quote="'"/>
     </group>
   </datatypes>
-  <table x="156" y="183" name="movies">
+  <table x="156" y="166" name="movies">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default>
     </row>
     <row name="tmdb_id" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="caisse_id" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
       <default>NULL</default>
     </row>
     <row name="title" null="1" autoincrement="0">
@@ -189,7 +193,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="264" y="473.25" name="users">
+  <table x="264" y="473" name="users">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default>
